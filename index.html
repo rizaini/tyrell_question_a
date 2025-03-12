@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Distribution</title>
+</head>
+<body>
+    <h1>Card Distribution</h1>
+    <form id="cardForm">
+        <label for="people">Number of People:</label>
+        <input type="number" id="people" name="people" required>
+        <button type="submit">Distribute Cards</button>
+    </form>
+    <pre id="output"></pre>
+
+    <script>
+        // load DOM 
+        document.addEventListener('DOMContentLoaded', function() {
+            // define form elements
+            const form = document.getElementById('cardForm');
+            const output = document.getElementById('output');
+    
+            // event lister on sumbit action
+            form.addEventListener('submit', function(event) {
+                // enhance by preveent reload
+                event.preventDefault();
+    
+                // definde input field 
+                const people = document.getElementById('people').value;
+    
+                // fetch request to the PHP script section
+                fetch(`card_distribution.php?people=${people}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // response in the output element
+                        output.textContent = data;
+                    })
+                    .catch(error => {
+                        // console if there is any error
+                        console.error('Error:', error);
+                        output.textContent = 'An error occurred. Please check the console for details.';
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
