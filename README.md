@@ -19,7 +19,7 @@ This project is a simple web application that distributes a standard deck of 52 
 
 tyrell_question_a/    
 └── Dockerfile\
-└── docker-compose.yml\  
+└── docker-compose.yml  
 └── index.html\
 └── card_distribution.php
 
