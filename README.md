@@ -114,10 +114,10 @@ services:
 4.  Enter the number of people and click  **Distribute Cards**  to see the result. eg: 4
 	  sample outpur results : 
     
-    C4,DJ,S4,D6,HQ,DA,S5,SQ,H2,C2,CX,D5,CK
-H5,S3,H3,C8,D9,C6,D7,DK,SX,CJ,H8,H4,S7
-C7,CA,SJ,H9,S6,S2,SA,H7,DQ,D2,S9,HA,D3
-DX,H6,SK,S8,HX,HK,C3,C9,HJ,D8,C5,CQ,D4
+    C4,DJ,S4,D6,HQ,DA,S5,SQ,H2,C2,CX,D5,CK\
+    H5,S3,H3,C8,D9,C6,D7,DK,SX,CJ,H8,H4,S7\
+    C7,CA,SJ,H9,S6,S2,SA,H7,DQ,D2,S9,HA,D3\
+    DX,H6,SK,S8,HX,HK,C3,C9,HJ,D8,C5,CQ,D4
 
 ## Testing the Application
 
